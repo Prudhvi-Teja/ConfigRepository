@@ -13,7 +13,7 @@ It has six microservices which are three of the Platform services and Business S
 
 Platform Services:
 1. Discovery Server (netflix Eureka Server)
-2. Spring Cloud Config Server (Maintaining all at Center repo)
+2. Spring Cloud Config Server (spring cloud config used to centralize common configuration accross all the microservice)
 3. Spring Cloud Gateway
 
 Business Services:
