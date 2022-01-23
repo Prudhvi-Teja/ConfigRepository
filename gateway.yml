@@ -1,0 +1,36 @@
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+      routes:
+      - id: authorization-api
+        uri: lb://AUTHORIZATION-MICROSERVICE
+        predicates:
+        - Path=/auth/**
+      - id: pensionerdetail-api
+        uri: lb://PENSIONERDETAIL-MICROSERVICE
+        predicates:
+        - Path=/pensioner/**
+      - id: process-pension-api
+        uri: lb://PROCESSPENSION-MICROSERVICE
+        predicates:
+        - Path=/process/**
+        
+        
+          
+server:
+  port: 8080
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
