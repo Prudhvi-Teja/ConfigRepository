@@ -34,5 +34,5 @@ eureka:
     hostname: discovery-server
   client:
     serviceUrl:
-      defaultZone: http://discovery-server:8761/eureka
+      defaultZone: http://ec2-3-84-92-59.compute-1.amazonaws.com:8761/eureka
 
