@@ -32,5 +32,5 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://registration:8761/eureka
+      defaultZone: http://172.17.0.3:8761/eureka
 
