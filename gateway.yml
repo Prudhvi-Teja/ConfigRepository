@@ -30,7 +30,9 @@ server:
   port: 8080
   
 eureka:
+  instance:
+    hostname: discovery-server
   client:
     serviceUrl:
-      defaultZone: http://172.17.0.3:8761/eureka
+      defaultZone: http://discovery-server:8761/eureka
 
